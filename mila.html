@@ -10,6 +10,11 @@
          type="text/css"
 		 href="styles.css"
 		 />	 
+	<script
+		 src="https://code.jquery.com/jquery-3.4.1.js"
+		 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		 crossorigin="anonymous"></script>
+
   </head>
   <body>
 		<a 
@@ -32,14 +37,61 @@
 		<h1>This is my first web page</h1>
 	   
 		<div class="row">
-           <div class="col-md-6 thin_border">
-			   Some content here for panel 1
+           <div class="col-md-3">
+			   <img class="crop-img"
+			        src="1.jpg" 
+			        alt="city/">
 		   </div>
-		   <div class="col-md-6 thin_border">
-			Some content here for panel 2
+		   <div class="col-md-3">
+			<img class="crop-img"
+			     src="2.jpg" 
+			    alt="Lonsoncity/">
+		   </div>
+		   <div class="col-md-3">
+				<img class="crop-img"
+				src="3.jpg" 
+				alt="amstercity/">
+		  </div>
+		  <div class="col-md-3">
+				<img class="crop-img"
+				src="4.jpg" 
+				alt="civei/">		
+				
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<img id="bigImage" 
+			  class="large-img" 
+			  src="1.jpg" 
+			  alt="city"/> 
+			  <div class="row">
+				<div class="col-md-12">
+					<img id="bigImage" 
+					  class="large-img" 
+					  src="2.jpg" 
+					  alt="graffittied building"/> 
+					  <div class="row">
+						<div class="col-md-12">
+							<img id="bigImage" 
+							  class="large-img" 
+							  src="3.jpg" 
+							  alt="graffittied building"/> 
+							  <div class="row">
+								<div class="col-md-12">
+									<img id="bigImage" 
+									  class="large-img" 
+									  src="4.jpg" 
+									  alt="graffittied building"/> 
 		</div>
 	</div>
 </div>
+<script>
+	$(".crop-img").click(function(){
+		$("#bigImage").attr('src', 
+			$(this).attr('src'));
+	});
+</script>
     <div class="container">
 		<h2>
 			This is the sub-title
